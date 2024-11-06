@@ -12,6 +12,7 @@
     <module>search</module>
     <module>sort</module>
     <module>tree</module>
+      <module>recursive</module>
   </modules>
 
   <name>algorithm</name>
