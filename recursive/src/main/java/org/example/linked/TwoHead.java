@@ -3,12 +3,9 @@ package org.example.linked;
 /**
  * <p>文件名称:org.example.linked.TwoHead</p>
  * <p>文件描述: 两个有序链表，打印公共部分</p>
- * <p>版权所有: Copyright(C)2019-2022</p>
- * <p>公司: 趣店集团 </p>
  * <p>内容摘要: </p>
  * <p>其他说明: </p>
  *
- * @author <a> href="mailto:chenrong@qudian.com">chen</a>
  * @version 1.0
  * @since 2024/11/19
  */

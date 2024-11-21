@@ -6,7 +6,6 @@ import java.util.Stack;
 /**
  * <p>文件名称:org.example.stack.SortStack</p>
  * <p>文件描述: 栈排序</p>
- * <p>版权所有: Copyright(C)2019-2022</p>
  * <p>内容摘要: </p>
  * <p>其他说明: </p>
  *

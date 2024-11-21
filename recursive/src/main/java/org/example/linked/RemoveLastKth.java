@@ -3,12 +3,9 @@ package org.example.linked;
 /**
  * <p>文件名称:org.example.linked.RemoveLastKth</p>
  * <p>文件描述: 单链表，删除倒数第k个元素</p>
- * <p>版权所有: Copyright(C)2019-2022</p>
- * <p>公司: 趣店集团 </p>
  * <p>内容摘要: </p>
  * <p>其他说明: </p>
  *
- * @author <a> href="mailto:chenrong@qudian.com">chen</a>
  * @version 1.0
  * @since 2024/11/20
  */

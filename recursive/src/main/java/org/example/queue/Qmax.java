@@ -6,12 +6,9 @@ import java.util.LinkedList;
 /**
  * <p>文件名称:org.example.queue.Qmax</p>
  * <p>文件描述: 双端队列，实现滑动窗口解决区间最大值</p>
- * <p>版权所有: Copyright(C)2019-2022</p>
- * <p>公司: 趣店集团 </p>
  * <p>内容摘要: </p>
  * <p>其他说明: </p>
  *
- * @author <a> href="mailto:chenrong@qudian.com">chen</a>
  * @version 1.0
  * @since 2024/11/12
  */

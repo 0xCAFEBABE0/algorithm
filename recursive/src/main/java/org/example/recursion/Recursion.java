@@ -3,15 +3,12 @@ package org.example.recursion;
 /**
  * <p>文件名称:org.example.recursion.Recursion</p>
  * <p>文件描述: 基础递归</p>
- * <p>版权所有: Copyright(C)2019-2022</p>
- * <p>公司: 趣店集团 </p>
  * <p>内容摘要: </p>
  * <p>其他说明:
  * 原问题与子问题除数据规模不同，求解思路完全相同
  * 需要弄清该如何缩小范围
  * </p>
  *
- * @author <a> href="mailto:chenrong@qudian.com">chen</a>
  * @version 1.0
  * @since 2024/11/18
  */
