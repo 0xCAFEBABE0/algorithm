@@ -72,10 +72,42 @@ public class Palindromic {
         return true;
     }
 
+    private static boolean palindromic_3(Node head) {
+        if (null == head.next) {
+            return true;
+        }
+        Stack<Integer> stack = new Stack<>();
+        Node cur = head;
+        Node rightHead = head; //右边首个节点
+        while(null != cur.next && null != cur.next.next) {
+            rightHead = rightHead.next;
+            cur = cur.next.next;
+        }
+        //反转右半边
+        Node next = null;
+        Node rightCur = rightHead.next;
+        rightHead.next = next;
+        while(null != rightCur) {
+            next = rightCur.next;
+            rightCur.next = rightHead;
+            rightHead = rightCur;
+            rightCur = next;
+        }
+
+        while(null != rightHead.next && null != head.next) {
+            if (rightHead.value != head.value) {
+                return false;
+            }
+            rightHead = rightHead.next;
+            head = head.next;
+        }
+        return true;
+    }
+
     public static void main(String[] args) {
         Node last = new Node(1, null);
         Node head = new Node(1, new Node(2, new Node(3, new Node(2, last))));
 
-        System.out.println(palindromic_2(head));
+        System.out.println(palindromic_3(head));
     }
 }
