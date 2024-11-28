@@ -10,7 +10,6 @@ package org.example.linked;
  * @since 2024/11/26
  */
 public class Pivot {
-
     private static class Node {
         public int value;
         public Node next;
