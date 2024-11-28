@@ -45,6 +45,27 @@ public class RandomNext {
         return copyMapper.get(head);
     }
 
+    private static Node deepCopyUseNeighbor(Node head) {
+        Node cur = head;
+        while (null != cur) {
+            Node next = cur.next;
+            Node neighbor = new Node(cur.value);
+            cur.next = neighbor;
+            neighbor.next = next;
+            cur = next;
+        }
+        cur = head;
+        while (null != cur && null != cur.next) {
+            Node neighbor = cur.next;
+            Node next = neighbor.next;
+
+            neighbor.random = cur.random.next;
+            neighbor.next = null != next ? next.next : null;
+            cur = next;
+        }
+        return head.next;
+    }
+
     public static void main(String[] args) {
         Node first = new Node(1);
         Node second = new Node(2);
@@ -58,7 +79,7 @@ public class RandomNext {
         second.random = first;
         third.random = second;
 
-        Node node = deepCopyUseHash(first);
+        Node node = deepCopyUseNeighbor(first);
         while (null != node) {
             System.out.println(node.value);
             System.out.println(node.next != null ? node.next.value : "null");
