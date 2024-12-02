@@ -5,7 +5,7 @@ import java.util.Stack;
 
 /**
  * <p>文件名称:org.example.stack.ReversedStack</p>
- * <p>文件描述: 栈逆序，递归不占用额外空间</p>
+ * <p>文件描述: 栈反转，递归不占用额外空间</p>
  * <p>内容摘要: </p>
  * <p>其他说明: </p>
  *

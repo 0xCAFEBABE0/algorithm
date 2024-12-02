@@ -4,7 +4,7 @@ import java.util.Stack;
 
 /**
  * <p>文件名称:org.example.linked.Palindromic</p>
- * <p>文件描述: </p>
+ * <p>文件描述: 判断是否回文结构</p>
  * <p>内容摘要: </p>
  * <p>其他说明: </p>
  *
