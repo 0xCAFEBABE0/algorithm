@@ -14,6 +14,11 @@ import java.util.Stack;
  */
 public class ReversedStack {
 
+    /**
+     * 获取栈底元素
+     * @param stack
+     * @return {@link Integer }
+     */
     private static Integer getAndRemoveLast(Stack<Integer> stack) {
         Integer result = stack.pop();
         if (stack.isEmpty()) {
