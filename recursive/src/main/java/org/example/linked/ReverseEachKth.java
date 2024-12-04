@@ -44,7 +44,7 @@ public class ReverseEachKth {
         Node pre = null;
         Node next = null;
         Node cur = head;
-        Node newHead = new Node(-1, null);
+        Node newHead = null;
 
         while (null != cur) {
             next = cur.next;

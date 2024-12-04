@@ -44,7 +44,6 @@ public class ReversedStack {
         stack.addAll(List.of(1, 2, 3));
         System.out.println(stack);
         reversed(stack);
-        //System.out.println(getAndRemoveLast(stack));
         System.out.println(stack);
     }
 }

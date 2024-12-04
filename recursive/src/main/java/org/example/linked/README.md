@@ -7,3 +7,4 @@
 - [链表施行加法操作](SumNode.java) :.2024-11-29
 - [k个一组翻转单链表](ReverseEachKth.java) :.2024-12-03
 - [单链表删除重复元素](RemoveRepeat.java) :.2024-12-03
+- [删除指定值的节点](RemoveSameValue.java) :.2024-12-04
