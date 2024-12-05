@@ -8,3 +8,4 @@
 - [k个一组翻转单链表](ReverseEachKth.java) :.2024-12-03
 - [单链表删除重复元素](RemoveRepeat.java) :.2024-12-03
 - [删除指定值的节点](RemoveSameValue.java) :.2024-12-04
+- [环形升序链表，插入指定值后，仍然保持有序](CircularInsertVal.java) :.2024-12-05
