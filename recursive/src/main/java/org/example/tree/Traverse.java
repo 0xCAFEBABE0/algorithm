@@ -22,6 +22,7 @@ public class Traverse {
         }
     }
 
+    //output:[1, 2, 4, 5, 3, 6, 7]
     private static void pre(Node root) {
         if (null == root) {
             return;
@@ -31,6 +32,7 @@ public class Traverse {
         pre(root.right);
     }
 
+    //output:[4, 2, 5, 1, 6, 3, 7]
     private static void mid(Node root) {
         if (null == root) {
             return;
@@ -40,6 +42,7 @@ public class Traverse {
         mid(root.right);
     }
 
+    //output:[4, 5, 2, 6, 7, 3, 1]
     private static void post(Node root) {
         if (null == root) {
             return;
@@ -61,6 +64,6 @@ public class Traverse {
         Node root = new Node(1
                 , new Node(2, new Node(4, null, null), new Node(5, null, null))
                 , new Node(3, new Node(6, null, null), new Node(7, null, null)));
-        mid(root);
+        post(root);
     }
 }
