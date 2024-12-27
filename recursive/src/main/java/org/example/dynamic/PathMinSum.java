@@ -33,6 +33,68 @@ public class PathMinSum {
         return dp[row - 1][col - 1];
     }
 
+    //滑动数组
+    private static int pathMinSum2(int[][] m) {
+        int row = m.length;
+        int col = m[0].length;
+
+        int len = Math.max(row, col);
+        boolean toCol = row == len;
+
+        int[] dp = new int[len];
+        dp[0] = m[0][0];
+
+        if (toCol) {
+            for (int i = 1; i < row; ++i) {
+                dp[i] = m[i][0] + dp[i-1];
+            }
+
+            for (int j = 1; j < col; ++j) {
+                dp[0] = m[0][j] + dp[0];
+                for (int i = 1; i < row; ++i) {
+                    dp[i] = Math.min(dp[i], dp[i - 1]) + m[i][j];
+                }
+            }
+        } else {
+            for (int i = 1; i < col; ++i) {
+                dp[i] = m[0][i] + dp[i-1];
+            }
+
+            for (int j = 1; j < row; ++j) {
+                dp[0] = m[j][0] + dp[0];
+                for (int i = 1; i < col; ++i) {
+                    dp[i] = Math.min(dp[i], dp[i - 1]) + m[j][i];
+                }
+            }
+        }
+        return dp[len - 1];
+    }
+
+    //滑动数组
+    private static int pathMinSum3(int[][] m) {
+        int row = m.length;
+        int col = m[0].length;
+
+        int len = Math.max(row, col);
+        boolean toCol = row == len;
+
+        int[] dp = new int[len];
+        dp[0] = m[0][0];
+
+        int dpLen = toCol ? row : col;
+        for (int i = 1; i < dpLen; ++i) {
+            dp[i] = (toCol ? m[i][0] : m[0][i]) + dp[i-1];
+        }
+
+        for (int j = 1; j < (toCol ? col : row); ++j) {
+            dp[0] = (toCol ? m[0][j] : m[j][0]) + dp[0];
+            for (int i = 1; i < (toCol ? row : col); ++i) {
+                dp[i] = Math.min(dp[i], dp[i - 1]) +  (toCol ? m[i][j] : m[j][i]);
+            }
+        }
+        return dp[len - 1];
+    }
+
     public static void main(String[] args) {
          int[][] m = {
              {1, 0, 2, 6},
@@ -40,7 +102,7 @@ public class PathMinSum {
              {4, 8, 5, 1},
              {7, 6, 2, 3},
          };
-        int res = pathMinSum1(m);
+        int res = pathMinSum3(m);
         System.out.println(res);
     }
 
