@@ -29,7 +29,7 @@ public class RobotWalker {
     //无后效性，使用动态规划表
     private static int walk_dp01(int n, int cur, int rest, int p) {
         int[][] dp = new int[rest + 1][n + 1];
-        dp[0][p] = 1;
+        dp[0][p] = 1; //base case
 
         for (int i = 1; i <= rest; ++i) {
             for (int j = 1; j <= n; ++j) {
@@ -51,9 +51,32 @@ public class RobotWalker {
         return dp[rest][cur];
     }
 
+    //采用空间压缩
+    private static int walk_dp02(int n, int cur, int rest, int p) {
+        int[] dp = new int[n + 1];
+        dp[p] = 1;
+
+        int leftUp = dp[1];
+        for (int i = 1; i <= rest; ++i) {
+            for (int j = 1; j <= n; ++j) {
+                int t = dp[j];
+                if (1 == j) {
+                    dp[j] = dp[j + 1];
+                } else if (n == j) {
+                    dp[j] = leftUp;
+                } else {
+                    dp[j] = leftUp + dp[j + 1];
+                }
+                leftUp = t;
+                System.out.print(dp[j]);
+            }
+            System.out.println();
+        }
+        return dp[cur];
+    }
 
     public static void main(String[] args) {
-        int walk = walk_dp01(5, 2, 3, 3);
+        int walk = walk_dp02(5, 2, 3, 3);
         System.out.println(walk);
     }
 }
